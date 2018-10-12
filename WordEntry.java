@@ -24,14 +24,37 @@ public class WordEntry {
 	}
 
 	public void addPositons (MyLinkedList<Position> positions){
-		this.listOfPositions.unionof2l(positions);
+		// String s = this.listOfPositions.getChildat(0).getPageEntry().getName();
+		this.listOfPositions =  this.listOfPositions.unionof2l(positions);
+		// String l = positions.getChildat(0).getPageEntry().getName();
+		// System.out.println("actual list has page : " + s);
+		// System.out.println("after list has page : " + l);
 	}
 	public MyLinkedList<Position> getAllPositionsForThisWord () {
 		return listOfPositions;
 	}
 
-	public float getTermFrequency ( String word ) {
-		// this is doubt 
+	public float getTermFrequency ( String pageString ) {
+		float f;
+		int count=0 , totalWords = 0;
+		PageEntry pE = new PageEntry();
+		for (int i = 0; i < listOfPositions.size(); i++) {
+			if (this.listOfPositions.getChildat(i).getPageEntry().getName().equals(pageString)) {
+				count++;
+				pE = this.listOfPositions.getChildat(i).getPageEntry();
+			}
+		}
+		if (count == 0) {
+			return 0;
+		}
+		else
+		{
+
+			for (int i = 0; i < pE.getPageIndex().getWordEntries().size(); i++) {
+				totalWords += pE.getPageIndex().getWordEntries().getChildat(i).getListOfPositions().size();
+			}
+			return ((float) count / totalWords);
+		}
 	}
 
 

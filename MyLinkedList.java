@@ -46,6 +46,7 @@ public class MyLinkedList<E>{
 		this.head = new Node<>(null , null , null);
 		this.tail = new Node<>(null, head, null);
 		this.head.setNext(this.tail);
+		this.size = 0;
 
  	}
 
@@ -68,7 +69,7 @@ public class MyLinkedList<E>{
  		int s = this.size;
  		for (int i = 0;i<s ;i++ ) {
  			// System.out.println(ptr.data);
- 			if(ptr.data == data)
+ 			if(ptr.data.equals(data))
  				return true;
  			ptr = ptr.getNext();
  		}
@@ -192,7 +193,10 @@ public class MyLinkedList<E>{
  		// System.out.println("Size of the list is "+ size);
  		Node<E> ptr = tail.getPrev();
  		for (int i = 0;i< size ; i++ ) {
- 			ans +=ptr.data;
+			 ans +=ptr.data;
+			 if (i!=size -1) {
+				 ans += " , ";
+			 }
  			ptr = ptr.getPrev();
  		}
  		return ans;

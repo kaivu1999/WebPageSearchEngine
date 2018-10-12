@@ -1,13 +1,13 @@
-addPage stack_cprogramming
 addPage stack_datastructure_wiki
 queryFindPagesWhichContainWord delhi
 queryFindPagesWhichContainWord stack
 queryFindPagesWhichContainWord wikipedia
-queryFindPositionsOfWordInAPage peek stack_datastructure_wiki
+queryFindPositionsOfWordInAPage magazines stack_datastructure_wiki
 queryFindPagesWhichContainWord allain
+addPage stack_cprogramming
 queryFindPagesWhichContainWord allain
 queryFindPagesWhichContainWord C
-queryFindPagesWhichContainWord structure
+queryFindPagesWhichContainWord C++
 addPage stack_oracle
 queryFindPagesWhichContainWord jdk
 addPage stackoverflow
@@ -15,6 +15,3 @@ queryFindPagesWhichContainWord function
 addPage stacklighting
 addPage stackmagazine
 queryFindPagesWhichContainWord magazines
-queryFindPagesWhichContainWord two
-queryFindPagesWhichContainWord oracle
-queryFindPagesWhichContainWord stack
