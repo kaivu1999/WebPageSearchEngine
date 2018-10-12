@@ -9,10 +9,10 @@ public class Position {
 		this.i = wordIndex;
 	}
 	
-	public getPageEntry () {
+	public PageEntry getPageEntry () {
 		return this.p;
 	}
-	public getWordIndex () {
+	public int  getWordIndex () {
 		return this.i;
 	}
 	

@@ -1,13 +1,22 @@
 
 public class WordEntry {
 	private String str = "";
-	MyLinkedList<Position> listOfPositions = new MyLinkedList<>(); 
+	private MyLinkedList<Position> listOfPositions = new MyLinkedList<>(); 
 	public WordEntry() {
 		// TODO Auto-generated constructor stub
 	}
 	public WordEntry( String word) {
 		//  TODO Auto-generated constructor stub
 		this.str = word;
+	}
+
+
+	public String getWord() {
+		return this.str;
+	}
+
+	public MyLinkedList<Position> getListOfPositions(){
+		return this.listOfPositions;
 	}
 	
 	public void addPosition (Position position) {
